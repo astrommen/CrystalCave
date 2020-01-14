@@ -1,1 +1,25 @@
+.banner {
+  font-size: 250%;
+  border: 2px solid red;
+}
+.directions{
+  border: 2px solid blue;
+}
+.crystal-value{
+  border: 2px solid green;
+}
+.user-score{
+  border: 2px solid green;
+}
+.game-score{
+  border: 2px solid green;
+}
+.crystals{
+  border: 2px solid yellow;
+}
+.container{
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 2%;
+}
 
