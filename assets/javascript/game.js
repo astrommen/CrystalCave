@@ -25,6 +25,7 @@ $(document).ready(function() {
       $("#user-score").empty();
       
       crystalValue = Math.floor(Math.random() * 101);console.log(crystalValue);
+      $(".crystal-value").text("Crystal Value = " + crystalValue);
       
       blue = randomCrysVal();console.log("this is " + blue);
       green = randomCrysVal();console.log("this is " + green);
