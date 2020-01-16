@@ -4,15 +4,15 @@ $(document).ready(function() {
     var green;
     var yellow;
     var red;
-    var crystalValue;
+    var crystalValue = 0;
     var userScore = 0;
     var wins = 0;
     var lose = 0;
     
-    var crystalValueText = document.getElementById("crystal-value");
-    var userScoreText = document.getElementById("user-score");
-    var winScoreText = document.getElementById("wins");
-    var loseScoreText = document.getElementById("loses");
+    // var crystalValueText = document.getElementById("crystal-value");
+    // var userScoreText = document.getElementById("user-score");
+    // var winScoreText = document.getElementById("wins");
+    // var loseScoreText = document.getElementById("loses");
     
     //clicking crystals something happens
     $(".crystals").on("click", function() {
@@ -27,17 +27,19 @@ $(document).ready(function() {
       crystalValue = Math.floor(Math.random() * 101);console.log(crystalValue);
       $(".crystal-value").text("Crystal Value = " + crystalValue);
       
-      blue = randomCrysVal();console.log("this is " + blue);
-      green = randomCrysVal();console.log("this is " + green);
-      yellow = randomCrysVal();console.log("this is " + yellow);
-      red = randomCrysVal();console.log("this is " + red);
+      $("#blue").attr("value", randomCrysVal()); console.log($(this).attr("value"));
+      $("#green").attr("value", randomCrysVal()); console.log($(this).attr("value"));
+      $("#yellow").attr("value", randomCrysVal()); console.log($(this).attr("value")); 
+      $("#red").attr("value", randomCrysVal()); console.log($(this).attr("value"));
       
     }
     
     function randomCrysVal() {
-      return Math.floor(Math.random() * 12);
-      
+      return Math.floor(Math.random() * 12); 
     } 
+
+ 
+    
     initializeCollector();
   });
   
