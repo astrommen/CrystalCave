@@ -5,7 +5,7 @@ $(document).ready(function() {
     var yellow;
     var red;
     var crystalValue = 0;
-    var userScore = 0;
+    var userScore = [];
     var wins = 0;
     var lose = 0;
     
@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
     
     function initializeCollector() {
-      var userScore = 0;
+      var userScore = [];
       
       $("#user-score").empty();
       
@@ -38,7 +38,13 @@ $(document).ready(function() {
       return Math.floor(Math.random() * 12); 
     } 
 
- 
+    //Game Play
+    $(".crystals").on("click", function(){
+    
+    userScore.push($(this).attr("value")); console.log(userScore);
+    
+    
+    });
     
     initializeCollector();
   });
