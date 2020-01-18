@@ -16,6 +16,8 @@
 }
 .crystals{
   border: 2px solid yellow;
+  height: 134px;
+  width: 100px;
 }
 .container{
   display: grid;
