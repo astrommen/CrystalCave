@@ -5,8 +5,10 @@ $(document).ready(function() {
     var crystalValue = 0;
     var userGemScore = [];
     var userScore = 0;
-    var wins = 0;
-    var lose = 0;
+    var w=0;
+    var l=0;
+    // var wins = 0;
+    // var lose = 0;
     
     // var crystalValueText = document.getElementById("crystal-value");
     // var userScoreText = document.getElementById("user-score");
@@ -18,18 +20,18 @@ $(document).ready(function() {
       return Math.floor((Math.random() * 12) + 1); 
     } 
     
+    function addIdValue(id){
+      $(id).attr("value", randomCrysVal()); 
+    }
+
     function initializeCollector() {
-      var userScore = 0;
+      userScore = 0;
+      userGemScore = [];
       
-      $("#user-score").empty();
+      $("#user-score").text(" ");
       
       crystalValue = Math.floor((Math.random() * 101) + 19);console.log(crystalValue);
-      $(".crystal-value").text("Crystal Value = " + crystalValue);
-      
-      // $("#blue").attr("value", randomCrysVal()); 
-      // $("#green").attr("value", randomCrysVal()); 
-      // $("#yellow").attr("value", randomCrysVal()); 
-      // $("#red").attr("value", randomCrysVal()); 
+      $(".crystal-value").text("Crystals Value: " + crystalValue);
       
       addIdValue("#blue");
       addIdValue("#green");
@@ -37,9 +39,6 @@ $(document).ready(function() {
       addIdValue("#red");
     }
     
-    function addIdValue(id){
-      $(id).attr("value", randomCrysVal()); 
-    }
 
     //Game Play
     $(".crystals").on("click", function(){
@@ -50,18 +49,23 @@ $(document).ready(function() {
           return Number(a) + Number(b);
       }); console.log(userScore);
 
-      // $(".user-score").text(userScore);
+      $("#user-score").text("Your Score: " + userScore);
       
+      //Win/Lose Condition
+      if (userScore === crystalValue){
+        w++;
+        $("#wins").text(w);
+        alert("You've gathered the crystals!");
+        initializeCollector();
+      } else if (userScore > crystalValue){
+        l++; 
+        console.log(l);
+        $("#losses").text(l);
+        alert("You've lost the crystals!");
+        initializeCollector();
+      }
     });
 
-    //Win/Lose Condition
-    if (userScore == crystalValue){
-      var w = 0;
-      w++;
-    } else if (userScore > crystalValue){
-      var l = 0;
-      l++;
-    }
     
     initializeCollector();
   });
