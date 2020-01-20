@@ -3,45 +3,65 @@
   <head>
     <meta charset = "UTF-8">
     <title>Aja's Crystal Game</title>
+    <!-- Link to reset file -->
+    <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
+    <!-- 		Link to fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"> 
+    <!-- Link to css-->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   
   <body>
     <div class="container">
-      <header class="banner">Welcome Crystal Collector!</header>
-      <section class="directions">
-        You are given the value of the crystals below.<br>
-        There are 4 crystals to choose. Choose wisely!<br>
-        Each crystal adds specific points to your score.<br>
-        <br>
-        You win by matching your score to the magic number.<br>
-        Crystal values are hidden until you click on them.<br>
-        Each time the game starts, the crystal values will change.<br>
-      </section>
+      <div class="row1">
+        <header class="banner">Welcome to Crystal Collector!</header>
+        <section class="directions">
+          You are given the value of the crystals below.<br>
+          There are 4 crystals to choose. Choose wisely!<br>
+          Each crystal adds specific points to your score.<br>
+          <br>
+          You win by matching your score to the magic number.<br>
+          Crystal values are hidden until you click on them.<br>
+          Each time the game starts, the crystal values will change.<br>
+        </section>
+      </div>
       
       <div class="container2">
-        <aside class="crystal-value">
-          Crystals Value:
-        </aside>
-        <aside class="user-score">
-          Your Score: <span id="user-score"></span>
-        </aside>
-        <aside class="game-score">
-          Wins: <span id="wins"></span><br>
-          Losses: <span id="losses"></span><br>
-        </aside>
+        <div class="col1">
+          <aside class="crystal-value">
+            Crystals Value:
+          </aside>
+          <aside class="user-score">
+            Your Score: <span id="user-score"></span>
+          </aside>
+        </div>
+        <div class="col2">
+          <aside class="game-score">
+            Wins: <span id="wins"></span><br>
+            Losses: <span id="losses"></span><br>
+          </aside>
+        </div>
       </div>     
-    </div>
     
-    <div class="container3">
-      <section class="crystals-box">
-        <img class="crystals" id="blue" src="https://image.shutterstock.com/image-photo/amazing-colorful-quartz-rainbow-flame-260nw-736064353.jpg" alt="blue crystal">
-        <img class="crystals" id="green" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRyRUAWHck4w43nBKiXYFCggn4qmcVTHhZB8uMz5SG0oCrZgKJ&s" alt="green crystal">
-        <img class="crystals" id="yellow"src="https://images-na.ssl-images-amazon.com/images/I/61PeyhiWYUL._AC_SY355_.jpg" alt="yellow crystal">
-        <img class="crystals" id="red" src="http://www.fengshuibestbuy.com/SL11827-3lotus.JPG" alt="red crystal">
-      </section>      
-    </div> 
+    
+      <!-- <div class="container3"> -->
+        <div class="crystals-box container3">
+          <div id="subrow1">
+              <img class="crystals" id="blue" src="./assets/images/purple.jpeg" alt="blue crystal">
+          </div>
+          <div id="subrow2-col1">
+              <img class="crystals" id="green" src="./assets/images/green.png" alt="green crystal">
+          </div>
+          <div id="subrow2-col2">
+              <img class="crystals" id="yellow" src="./assets/images/yellow.jpg" alt="yellow crystal">
+          </div>
+          <div id="subrow3">
+              <img class="crystals" id="red" src="./assets/images/red.png" alt="red crystal">  
+          </div> 
+        </div>      
+      <!-- </div>  -->
+    </div>
     <script src="./assets/javascript/game.js"></script> 
   </body>
 </html>

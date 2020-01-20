@@ -1,3 +1,44 @@
+body{
+  font-family: 'Bangers', cursive;
+  text-align: center;
+}
+.container{
+  display: grid;
+}
+.container2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container3{
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+} 
+
+.crystals{
+  border: 2px solid yellow;
+  height: 134px;
+  width: 100px;
+}
+#subrow1{
+  grid-row: 1;
+  grid-column: 2;
+}
+#subrow2-col1{
+  grid-row: 2;
+  grid-column: 1;
+  padding-left:50%;
+}
+#subrow2-col2{
+  grid-row: 2;
+  grid-column: 3;
+  padding-right:75%;
+}
+#subrow3{
+  grid-row: 3;
+  grid-column: 2;
+}
 .banner {
   font-size: 250%;
   border: 2px solid red;
@@ -13,17 +54,4 @@
 }
 .game-score{
   border: 2px solid green;
-}
-.crystals{
-  border: 2px solid yellow;
-  height: 134px;
-  width: 100px;
-}
-.container{
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-gap: 2%;
-}
-.container3{
-  margin: 3% auto;
 }
