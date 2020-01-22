@@ -31,7 +31,7 @@ $(document).ready(function() {
       $("#user-score").text(" ");
       
       crystalValue = Math.floor((Math.random() * 101) + 19);console.log(crystalValue);
-      $(".crystal-value").text("Crystals Value: " + crystalValue);
+      $(".crystal-value").text("Crystal Value: " + crystalValue);
       
       addIdValue("#blue");
       addIdValue("#green");
@@ -49,7 +49,7 @@ $(document).ready(function() {
           return Number(a) + Number(b);
       }); console.log(userScore);
 
-      $("#user-score").text("Your Score: " + userScore);
+      $("#user-score").text(userScore);
       
       //Win/Lose Condition
       if (userScore === crystalValue){
